@@ -1,0 +1,5 @@
+[flake8]
+max-line-length = 127
+# max-complexity = 10 # current code has some complex logic to be simplified in the future
+extend-ignore =   
+    E203 # See https://github.com/PyCQA/pycodestyle/issues/373

@@ -45,7 +45,7 @@ with open(inputFile, "r") as f:
                     "width": anno["width"],
                     "height": anno["height"],
                 },
-                "region_attributes":{}
+                "region_attributes": {},
             }
             viaObj["regions"].append(region)
         via[f"{url}-1"] = viaObj

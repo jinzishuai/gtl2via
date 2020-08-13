@@ -35,16 +35,17 @@ with open(inputFile, "r") as f:
         gtl = json.loads(line)
         url = gtl["source-ref"]
         annotations = gtl[label]["annotations"]
-        viaObj = {"filename": url, "size": -1, "regions": []}
+        viaObj = {"filename": url, "size": -1, "regions": [], "file_attributes": {}}
         for anno in annotations:
             region = {
-                "shape_atttributes": {
+                "shape_attributes": {
                     "name": "rect",
                     "x": anno["left"],
                     "y": anno["top"],
                     "width": anno["width"],
-                    "heighht": anno["height"],
-                }
+                    "height": anno["height"],
+                },
+                "region_attributes":{}
             }
             viaObj["regions"].append(region)
         via[f"{url}-1"] = viaObj

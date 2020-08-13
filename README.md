@@ -6,7 +6,7 @@
 
 * https://docs.aws.amazon.com/sagemaker/index.html
 
-### VGG Image Annotator (VAG)
+### VGG Image Annotator (VIA)
 
 * project: http://www.robots.ox.ac.uk/~vgg/software/via/
 * code repo: https://gitlab.com/vgg/via/-/tree/master

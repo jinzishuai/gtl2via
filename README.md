@@ -39,15 +39,41 @@ optional arguments:
 ## Example 
  
 ```
-gtl2via$ python gtl2via.py  -i test/defect_boxes.manifest -o test/via.json -l zerobox-quick-detection -s zerobox-images
+python gtl2via.py  -i test/defect_boxes.manifest -o test/via.json -l zerobox-quick-detection -s zerobox-public
+```
+
+The input manifest file looks like this:
+```json
+seki@seki-Surface-Book:~/src/gtl2via$ cat test/defect_boxes.manifest |jq
+{
+  "source-ref": "s3://zerobox-public/test/2020-08-13/good/Camera0_202008131130183_original.png",
+  "zerobox-quick-detection": {
+    "annotations": [
+      {
+        "class_id": 0,
+        "width": 519,
+        "top": 896,
+        "height": 1024,
+        "left": 512
+      }
+    ],
+    "image_size": [
+      {
+        "width": 1080,
+        "depth": 3,
+        "height": 1920
+      }
+    ]
+  },
+
 ```
 
 The output json looks like this
 ```json
-seki@seki-Surface-Book:~/src/gtl2via$ cat test/via.json |jq 
+seki@seki-Surface-Book:~/src/gtl2via$ cat test/via.json |jq
 {
-  "https://zerobox-images.s3.amazonaws.com/test/2020-08-12/good/Camera0_202008121004202_original.png-1": {
-    "filename": "https://zerobox-images.s3.amazonaws.com/test/2020-08-12/good/Camera0_202008121004202_original.png",
+  "https://zerobox-public.s3.amazonaws.com/test/2020-08-13/good/Camera0_202008131130183_original.png-1": {
+    "filename": "https://zerobox-public.s3.amazonaws.com/test/2020-08-13/good/Camera0_202008131130183_original.png",
     "size": -1,
     "regions": [
       {
@@ -63,7 +89,12 @@ seki@seki-Surface-Book:~/src/gtl2via$ cat test/via.json |jq
     ],
     "file_attributes": {}
   },
+
 ```
+
+Loading the annoation json file into VIA-2 and we see a result like this
+![image](https://user-images.githubusercontent.com/1074685/90168432-4f923b00-dd5a-11ea-81f5-a3b13c470e65.png)
+
 
 # Known Limitations (ToDo)
 

@@ -24,7 +24,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-## Constants
+# Constants
 inputFile = args.input
 label = args.label
 outputFile = args.output

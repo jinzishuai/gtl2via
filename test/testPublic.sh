@@ -8,7 +8,7 @@ TOPFOLDER=$(dirname $SCRIPTPATH)
 
 pushd $TOPFOLDER
 
-python gtl2via.py  -i test/defect_boxes.manifest -o test/via.json -l zerobox-quick-detection -s zerobox-public
+python -m gtl2via -i test/defect_boxes.manifest -o test/via.json -l zerobox-quick-detection -s zerobox-public
 
 if [[ $(cat test/via.json |wc -m) == 4403 ]]; then
     echo "Correct results"

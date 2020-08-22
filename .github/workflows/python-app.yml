@@ -40,4 +40,4 @@ jobs:
     - name: Test with public converters
       timeout-minutes: 1
       run: |
-        test/testPublic.sh
+        test/testConverters.sh

@@ -37,7 +37,7 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-    - name: Test with public manifest
+    - name: Test with public converters
       timeout-minutes: 1
       run: |
         test/testPublic.sh

@@ -6,7 +6,6 @@ SCRIPT=$(readlink -f $0)
 SCRIPTPATH=`dirname $SCRIPT`
 TOPFOLDER=$(dirname $SCRIPTPATH)
 
-sudo apt install -y jq
 pushd $TOPFOLDER
 
 python -m gtl2via -i test/defect_boxes.manifest -o test/via.json -l zerobox-quick-detection -s zerobox-public

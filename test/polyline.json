@@ -1,0 +1,156 @@
+{
+    "group1N_6.png554629": {
+        "filename": "group1N_6.png",
+        "size": 554629,
+        "regions": [
+            {
+                "shape_attributes": {
+                    "name": "polyline",
+                    "all_points_x": [
+                        376,
+                        1201,
+                        1332,
+                        1397,
+                        1402,
+                        1419,
+                        1426,
+                        1425,
+                        1420,
+                        1415,
+                        1408,
+                        1363,
+                        1346,
+                        1321,
+                        1305,
+                        1302,
+                        590,
+                        312,
+                        309,
+                        301,
+                        304,
+                        311,
+                        322,
+                        337,
+                        357,
+                        368,
+                        377
+                    ],
+                    "all_points_y": [
+                        323,
+                        314,
+                        380,
+                        381,
+                        387,
+                        420,
+                        480,
+                        519,
+                        549,
+                        553,
+                        558,
+                        562,
+                        562,
+                        578,
+                        589,
+                        590,
+                        590,
+                        592,
+                        589,
+                        529,
+                        483,
+                        444,
+                        400,
+                        358,
+                        330,
+                        323,
+                        322
+                    ]
+                },
+                "region_attributes": {
+                    "name": "not_defined",
+                    "type": "unknown",
+                    "image_quality": {
+                        "good": true,
+                        "frontal": true,
+                        "good_illumination": true
+                    }
+                }
+            }
+        ],
+        "file_attributes": {
+            "caption": "",
+            "public_domain": "no",
+            "image_url": ""
+        }
+    },
+    "group16N_139.png658221": {
+        "filename": "group16N_139.png",
+        "size": 658221,
+        "regions": [
+            {
+                "shape_attributes": {
+                    "name": "polyline",
+                    "all_points_x": [
+                        241,
+                        252,
+                        261,
+                        302,
+                        320,
+                        357,
+                        386,
+                        400,
+                        429,
+                        461,
+                        978,
+                        1016,
+                        1026,
+                        1038,
+                        1042,
+                        1049,
+                        1050,
+                        1051,
+                        242,
+                        241,
+                        241
+                    ],
+                    "all_points_y": [
+                        574,
+                        519,
+                        480,
+                        419,
+                        407,
+                        398,
+                        398,
+                        398,
+                        379,
+                        379,
+                        381,
+                        386,
+                        390,
+                        400,
+                        429,
+                        480,
+                        551,
+                        586,
+                        587,
+                        582,
+                        572
+                    ]
+                },
+                "region_attributes": {
+                    "name": "not_defined",
+                    "type": "unknown",
+                    "image_quality": {
+                        "good": true,
+                        "frontal": true,
+                        "good_illumination": true
+                    }
+                }
+            }
+        ],
+        "file_attributes": {
+            "caption": "",
+            "public_domain": "no",
+            "image_url": ""
+        }
+    }
+}

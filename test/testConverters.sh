@@ -20,13 +20,13 @@ fi
 
 python -m viapl2rect -i test/polyline.json -o test/rect.json
 
-if [[ $(cat test/rect.json | jq | grep rect | wc -l) == 2 ]]; then
+if [[ $(cat test/rect.json | jq '.' | grep rect | wc -l) == 2 ]]; then
     echo "Correct results with viapl2rect"
     exit 0
 else
     echo "Wrong results: expected to find two rect:"
     ls -l test/rect.json 
-    cat test/rect.json | jq
+    cat test/rect.json | jq '.'
     cat test/rect.json
     exit 2
 fi

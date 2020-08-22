@@ -19,5 +19,10 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.6",
-    entry_points={"console_scripts": ["gtl2via = gtl2via.__main__:main"]},
+    entry_points={
+        "console_scripts": [
+            "gtl2via = gtl2via.__main__:main",
+            "viapl2rect = viapl2rect.__main__:viapl2rect",
+        ]
+    },
 )

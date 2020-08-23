@@ -2,6 +2,7 @@
 # Date: August 22, 2020
 import argparse
 import json
+from faker import Factory
 
 cocoLabels = [
     "person",
@@ -90,18 +91,26 @@ cocoLabels = [
 def cocolabels2json(args=None):
     parser = argparse.ArgumentParser()
     parser.add_argument(
+        "-i", "--index", type=int, help="the single index to keep", required=True,
+    )
+    parser.add_argument(
         "-o", "--output", type=str, help="output JSON file", required=True,
     )
     args = parser.parse_args()
 
     # Constants
     outputFile = args.output
+    index = args.index
     labels = []
-    i = 0
-    for label in cocoLabels:
-        print(f"{label}")
-        labels.append({"name": label, "id": i})
-        i += 1
+
+    fake = Factory.create()
+    for i in range(0, index):
+        # print(f"{label}")
+        labels.append({"name": f"{i}", "color": fake.hex_color(), "attributes": []})
+
+    labels.append(
+        {"name": cocoLabels[index], "color": fake.hex_color(), "attributes": []}
+    )
 
     with open(outputFile, "w") as fpO:
         json.dump(labels, fpO)

@@ -21,11 +21,22 @@ fi
 python -m viapl2rect -i test/polyline.json -o test/rect.json
 
 if [[ $(cat test/rect.json | jq '.' | grep rect | wc -l) == 2 ]]; then
-    echo "Correct results with viapl2rect"
+    echo "Correct results with viapl2rect. Continue"
     exit 0
 else
     echo "Wrong results: expected to find two rect:" 
     cat test/rect.json | jq '.'
     exit 2
 fi
+
+python -m cocolabels2json -o test/cvat.json -i 41
+if [[ $(cat cvat.json |jq '.' |grep name |wc) == 42 ]]; then
+    echo "Correct results with cocolabels2json"
+    exit 0
+else
+    echo "Wrong results: expected to find 42 items in the JSON array:"
+    cat test/cvat.json | jq '.'
+    exit 3
+fi
+
 popd
